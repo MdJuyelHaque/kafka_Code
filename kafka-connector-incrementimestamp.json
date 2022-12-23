@@ -1,0 +1,22 @@
+{
+    "name":"Task",
+    "config": {
+            "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+            "connection.url": "jdbc:sqlserver://Ip:1433;databaseName=DBName",
+            "connection.user": "username",
+            "connection.password": "password",
+            "table.whitelist" : "DemoDB.dbo.Demo",
+            "mode":"timestamp+incrementing", 
+            "table.type":"table",
+            "timestamp.columname":"UpdatedDateTime",
+            "validate.non.null": false,
+            "incrementing.column.name":"Id", 
+            "poll.interval.ms": "1000",  
+            "topic.prefix": "T-",
+            "db.timezone": "Europe/Warsaw",
+            "value.converter":"org.apache.kafka.connect.json.JsonConverter"
+
+
+                                    }
+    }
+

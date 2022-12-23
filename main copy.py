@@ -1,0 +1,11 @@
+import os
+os.system('python UnitOfWork-Task.py')
+os.system('python workqueue-task.py')
+os.system('python UnitOfWorkLastPickedByUser-task.py')
+os.system('python Assignment.py')
+os.system('python UnitOfWorkTaskAggregate-task.py')
+os.system('python Taskstate-Task.py')
+os.system('python BuildingPriorityCode-task.py')
+os.system('python user-task.py')
+os.system('python TaskStagePickingType.py')
+os.system('python task_state-task.py')
