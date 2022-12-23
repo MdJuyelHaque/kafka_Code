@@ -31,24 +31,18 @@ for message in consumer:
     table_name=json_load["schema.name"]
     print(table_name)
     
-    # myclient = pymongo.MongoClient("mongodb+srv://lucas-system:xk1795Bqjv2I6m80@db-mongodb-f6a21137.mongo.ondigitalocean.com/admin?tls=true&authSource=admin")
+    myclient = pymongo.MongoClient("MongoConnectionstring")
     
-    # mydb = myclient[table_name]
-    # mycol = mydb[table_name]
-    # x = mycol.insert_one(payload)
-    # myquery =payload
-    # print(myquery)
-    # newvalues = { "$set":payload }
-    # print(newvalues)
-    # mycol.update_one(myquery,newvalues,upsert="true")
+    mydb = myclient[table_name]
+    mycol = mydb[table_name]
+    x = mycol.insert_one(payload)
+    myquery =payload
+    print(myquery)
+    newvalues = { "$set":payload }
+    print(newvalues)
+    mycol.update_one(myquery,newvalues,upsert="true")
 
-# p1={"BookName":"Juyel"}
-# p={"$set":{"BookName":"Juyel"}}
-    #ycol.update_one(myquery,newvalues)
-    #mycol.update_one({'_id':x}, {"$set": payload}, upsert=True)
-    # x1=mydb.mycol.find({},'BookId')
-    # print(x1)
-    
+
     
 
  

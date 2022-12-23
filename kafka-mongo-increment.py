@@ -26,9 +26,9 @@ for message in consumer:
     json_load=json.loads(fl_json)
     table_name=json_load["schema.name"]
     print(table_name)
-    myclient = pymongo.MongoClient("mongodb+srv://lucas-system:xk1795Bqjv2I6m80@db-mongodb-f6a21137.mongo.ondigitalocean.com/admin?tls=true&authSource=admin")
+    myclient = pymongo.MongoClient("mongodb+connectionstring")
     
-    mydb = myclient[table_name]
+    mydb = myclient[db]
     mycol = mydb[table_name]
     x = mycol.insert_one(payload)
     # myquery =payload

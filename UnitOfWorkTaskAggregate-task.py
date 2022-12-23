@@ -3,8 +3,8 @@ import flatten_json
 import pymongo
 def  UnitOfWorkTaskAggregate_task():
   
-      myclient = pymongo.MongoClient("mongodb+srv://pymong:Mx40Yof7286Zr91H@db-mongodb-f6a21137.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=db-mongodb")
-      mydb = myclient["Local_PickingSupervisor"]
+      myclient = pymongo.MongoClient("mongodb+-connectionstring")
+      mydb = myclient["DBname"]
       
       mycol = mydb["UnitOfWorkTaskAggregate"]
       myquery =mycol.find({},{'_id':0})   

@@ -41,8 +41,8 @@ def  table1():
       json_load=json.loads(fl_json)
       table_name=json_load["schema.name"]
       print(table_name)
-      myclient = pymongo.MongoClient("mongodb+srv://pymong:Mx40Yof7286Zr91H@db-mongodb-f6a21137.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=db-mongodb")
-      mydb = myclient["Local_PickingSupervisor_Demo"]
+      myclient = pymongo.MongoClient("mongodb-connectionstring")
+      mydb = myclient["DB"]
       mycol = mydb[table_name]
       if(table_name=="TaskState_Demo"):
         print("The original dictionary : " + str(payload))

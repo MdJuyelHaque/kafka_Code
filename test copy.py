@@ -3,9 +3,9 @@ import flatten_json
 import pymongo
 def  unit_task():
   
-      myclient = pymongo.MongoClient("mongodb+srv://pymong:Mx40Yof7286Zr91H@db-mongodb-f6a21137.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=db-mongodb")
-      mydb = myclient["Local_PickingSupervisor"]
-      mydb1=myclient["Local_PickingSupervisor_Demo"]
+      myclient = pymongo.MongoClient("mongodb")
+      mydb = myclient["db"]
+      mydb1=myclient["db"]
       
       mycol = mydb["Assignment"]
       myquery =mycol.find({},{'_id':0})   

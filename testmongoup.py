@@ -28,7 +28,7 @@ def  table1():
   #     table_name=json_load["schema.name"]
   #     print(table_name)
   payload={'BookId': 11793, 'BookName': 'Java1211', 'CreateDate': 1669100090430, 'ModifiedDate': 1669100090430}
-  myclient = pymongo.MongoClient("mongodb+srv://lucas-system:xk1795Bqjv2I6m80@db-mongodb-f6a21137.mongo.ondigitalocean.com/admin?tls=true&authSource=admin")
+  myclient = pymongo.MongoClient("mongodb-connectionstring")
   
   mydb = myclient["Books"]
   mycol = mydb["Books"]
